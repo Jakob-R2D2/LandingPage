@@ -1,0 +1,56 @@
+
+<div class="row">
+    <div class="col">
+        <h1>Semester 1</h1>
+    </div>
+    <div class="col">
+        <h1>Semester 2</h1>
+    </div>
+    <div class="col">
+        <h1>Semester 3</h1>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col">
+      <div *ngFor="let topic of topics">
+          <a class="nav-item nav-link" [routerLink]="topic.routerLink">
+              <b>{{topic.title}}</b>
+          </a>
+          <br>
+          <br>
+      </div>
+  </div>
+
+  <!-- Themen-Elemente aus der globalen Liste: ITopics -->
+  <div class="col">
+      <a class="nav-item nav-link" routerLink="/login"><b>Thema 1</b></a>
+      <br>
+      <br>
+  <a class="nav-item nav-link" routerLink="/home"><b>Thema 2</b></a>
+      <br>
+      <br>
+  <a class="nav-item nav-link" routerLink="/home"><b>Thema 3</b></a>
+  </div>
+
+  <div class="col">
+      <a class="nav-item nav-link" routerLink="/login"><b>Thema 1</b></a>
+      <br>
+      <br>
+  <a class="nav-item nav-link" routerLink="/home"><b>Thema 2</b></a>
+      <br>
+      <br>
+  <a class="nav-item nav-link" routerLink="/home"><b>Thema 3</b></a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 offset-sm-2">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+
+<button (click)="myPressMeFunction('yolo')">press me</button>
+
+
+<h1 *ngIf="iAmTrueMan">i am hidden bro</h1>
